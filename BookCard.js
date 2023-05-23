@@ -25,12 +25,15 @@ class BookCard extends HTMLElement {
         // container.append(image, title, author, translator)
 
         // 通过注册组件调用该模板
+
+        // Shadow DOM 进行DOM样式隔离
+        this.attachShadow({ mode: 'open' })
+
         const templateElem = document.getElementById('book-card-template')
         const clonedElem = templateElem.content.cloneNode(true)
 
         this.appendChild(clonedElem)
 
-        console.log('test git')
     }
 }
 
