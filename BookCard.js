@@ -37,8 +37,12 @@ class BookCard extends HTMLElement {
         clonedElem.querySelector('.container > .author').textContent = this.getAttribute('data-author')
         clonedElem.querySelector('.container > .translator').textContent = this.getAttribute('data-translator')
 
-        this.shadowRoot.appendChild(clonedElem)
+        clonedElem.querySelector('.container > .action').addEventListener('click', () => {
+            alert('hello world')
+        })
         
+        this.shadowRoot.appendChild(clonedElem)
+
     }
 }
 
