@@ -8,10 +8,53 @@
 </head>
 <body>
     <template id="book-card-template">
-        <img src="https://file.ituring.com.cn/LargeCover/23047b0f0134221867e2">
-        <p>Python编程：从入门到实践（第3版）</p>
-        <p>[美]埃里克·马瑟斯（Eric Matthes）</p>
-        <p>袁国忠</p>
+<!--        在template模板内部加入style标签从而添加样式-->
+
+        <style>
+            p {
+                margin: 0;
+            }
+
+            .container {
+                display: inline-flex;
+                flex-direction: column;
+                border-radius: 6px;
+                border: 1px solid silver;
+                padding: 6px;
+                margin: 6px;
+            }
+
+            .image {
+                border-radius: 6px;
+                width: 300px;
+            }
+
+            .title {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 22px;
+                margin-top: 6px;
+                margin-bottom: 6px;
+            }
+
+            .author {
+                margin-bottom: 6px;
+                line-height: 1; color: #8590a6;
+                font-size: 14px;
+            }
+
+            .translator {
+                color: #8590a6;
+                font-size: 14px;
+            }
+        </style>
+
+        <div class="container">
+            <img class="image" src="https://file.ituring.com.cn/LargeCover/23047b0f0134221867e2">
+            <p class="title">Python编程：从入门到实践（第3版）</p>
+            <p class="author">[美]埃里克·马瑟斯（Eric Matthes）</p>
+            <p class="translator">袁国忠</p>
+        </div>
     </template>
     <book-card></book-card>
     <script src="./BookCard.js"></script>
