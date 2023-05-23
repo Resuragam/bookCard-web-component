@@ -35,11 +35,13 @@
                 line-height: 22px;
                 margin-top: 6px;
                 margin-bottom: 6px;
+                color: #222
             }
 
             .author {
                 margin-bottom: 6px;
-                line-height: 1; color: #8590a6;
+                line-height: 1;
+                color: #8590a6;
                 font-size: 14px;
             }
 
@@ -47,16 +49,43 @@
                 color: #8590a6;
                 font-size: 14px;
             }
+
         </style>
 
         <div class="container">
-            <img class="image" src="https://file.ituring.com.cn/LargeCover/23047b0f0134221867e2">
-            <p class="title">Python编程：从入门到实践（第3版）</p>
-            <p class="author">[美]埃里克·马瑟斯（Eric Matthes）</p>
-            <p class="translator">袁国忠</p>
+            <img class="image" src="" alt="">
+            <p class="title"></p>
+            <p class="author"></p>
+            <p class="translator"></p>
+            <div class="action">
+                <slot name="action-btn"></slot>
+            </div>
         </div>
     </template>
-    <book-card></book-card>
+
+    <book-card
+        data-image="https://file.ituring.com.cn/LargeCover/23047b0f0134221867e2"
+        data-title="Python编程：从入门到实践（第3版）"
+        data-author="[美]埃里克·马瑟斯（Eric Matthes）"
+        data-translator="袁国忠"
+    >
+        <button slot="action-btn" class="btn primary">购买</button>
+    </book-card>
     <script src="./BookCard.js"></script>
+    <style>
+        .primary {
+            border: #6B9CFF;
+            background: #6B9CFF;
+        }
+
+        .btn {
+            margin-top: 6px;
+            width: 100%;
+            padding: 6px;
+            border-radius: 3px;
+            color: white;
+            font-weight: 700;
+        }
+    </style>
 </body>
 </html>

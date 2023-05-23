@@ -32,8 +32,13 @@ class BookCard extends HTMLElement {
         const templateElem = document.getElementById('book-card-template')
         const clonedElem = templateElem.content.cloneNode(true)
 
-        this.appendChild(clonedElem)
+        clonedElem.querySelector('.container > .image').src = this.getAttribute('data-image')
+        clonedElem.querySelector('.container > .title').textContent = this.getAttribute('data-title')
+        clonedElem.querySelector('.container > .author').textContent = this.getAttribute('data-author')
+        clonedElem.querySelector('.container > .translator').textContent = this.getAttribute('data-translator')
 
+        this.shadowRoot.appendChild(clonedElem)
+        
     }
 }
 
