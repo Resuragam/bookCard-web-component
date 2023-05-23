@@ -29,6 +29,8 @@ class BookCard extends HTMLElement {
         const clonedElem = templateElem.content.cloneNode(true)
 
         this.appendChild(clonedElem)
+
+        console.log('test git')
     }
 }
 
